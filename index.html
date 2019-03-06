@@ -229,6 +229,126 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://shuhaohe.github.io/2019/03/05/数据结构基础-Tree/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shuhao He">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShuhaoHe">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/05/数据结构基础-Tree/" itemprop="url">数据结构基础--Tree</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-05T16:15:32+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>树是一种半线性结构</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://shuhaohe.github.io/2019/03/05/Git基础/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -300,22 +420,58 @@
       
         
           
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文是以“使用Git管理代码的流程是怎么样的”行文，不是列举Git的命令。这方面推荐两个入门的Blog <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰</a> <a href="http://blog.codingplayboy.com/category/gitsvn/" target="_blank" rel="noopener">熊建刚</a></p>
-<h2 id="case-1-本地写了一些代码，想把它通过Git上传到Github。而Github还没有存在放这些代码的仓库。"><a href="#case-1-本地写了一些代码，想把它通过Git上传到Github。而Github还没有存在放这些代码的仓库。" class="headerlink" title="case 1 本地写了一些代码，想把它通过Git上传到Github。而Github还没有存在放这些代码的仓库。"></a>case 1 本地写了一些代码，想把它通过Git上传到Github。而Github还没有存在放这些代码的仓库。</h2><ol>
-<li><p>在代码文件夹运行以下命令</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add -A # 全部添加入git版本管理系统</span><br><span class="line">git commit -m &quot;init project&quot; # 提交到本地的代码仓库</span><br></pre></td></tr></table></figure>
-</li>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文是以“使用Git管理代码的流程是怎么样的”行文。另外，推荐两个入门的Blog <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰</a> <a href="http://blog.codingplayboy.com/category/gitsvn/" target="_blank" rel="noopener">熊建刚</a></p>
+<h2 id="第一节-最常见的例子"><a href="#第一节-最常见的例子" class="headerlink" title="第一节 最常见的例子"></a>第一节 最常见的例子</h2><p>对于新手，第一个需要就是：本地写了一些代码，想把它通过Git上传到Github。</p>
+<ol>
+<li>在本地代码文件夹运行以下命令，生成一个版本管理的仓库</li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add -A # 全部添加入git版本管理系统</span><br><span class="line">git commit -m &quot;init project&quot; # 提交到本地的代码仓库</span><br></pre></td></tr></table></figure>
 <ol start="2">
-<li><p>打开Github，new一个仓库，建议不要新建README文件，这容易使你第一次同步的时候出现“两个仓库代码历史没有关联”的错误，虽然修复的方法也很简单。</p>
+<li><p>打开Github，new一个仓库，建议不要新建README文件，这容易使你第一次同步的时候出现“error: failed to push some refs to”的错误，虽然修复的方法也很简单。错误信息如图：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin master</span><br><span class="line">To https://github.com/shuhaohe/LearnGit.git</span><br><span class="line"> ! [rejected]        master -&gt; master (fetch first)</span><br><span class="line">error: failed to push some refs to <span class="string">'https://github.com/shuhaohe/LearnGit.git'</span></span><br><span class="line">hint: Updates were rejected because the remote contains work that you <span class="keyword">do</span></span><br><span class="line">hint: not have locally. This is usually caused by another repository pushing</span><br><span class="line">hint: to the same ref. You may want to first integrate the remote changes</span><br><span class="line">hint: (e.g., <span class="string">'git pull ...'</span>) before pushing again.</span><br><span class="line">hint: See the <span class="string">'Note about fast-forwards'</span> <span class="keyword">in</span> <span class="string">'git push --help'</span> <span class="keyword">for</span> details.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修复方法</span></span><br><span class="line">git pull --rebase origin master <span class="comment"># 修复上述问题。</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>将第二步生成的Github远端仓库添加到本地仓库</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://xxx.github.com  # origin是你给远端仓库在本地起的别名。这是约定俗成的，强烈建议不要改。</span><br><span class="line"></span><br><span class="line"># 查看本地仓库关联了多少个远端仓库</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将本地代码push到Github</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master  </span><br><span class="line"># 第一次push需要添加-u选项。 后续push不需要加-u。</span><br><span class="line"># -u表示upstream，表示远端分支</span><br><span class="line"># upstream相对的是tracking，叫做跟踪分支，是指本地的分支。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://xxx.github.com  </span><br><span class="line"># origin是你给远端仓库在本地起的别名。这是约定俗成的，强烈建议不要改。</span><br><span class="line"># 查看本地仓库关联了多少个远端仓库。本地代码可以关联多个远程代码仓库。</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>将本地代码push到Github<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master  </span><br><span class="line"># 第一次push需要添加-u选项。 后续push不需要加-u。</span><br><span class="line"># -u表示upstream，表示远端分支</span><br><span class="line"># upstream相对的是tracking，叫做跟踪分支，是指本地的分支。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="第二节-Git的常用配置"><a href="#第二节-Git的常用配置" class="headerlink" title="第二节 Git的常用配置"></a>第二节 Git的常用配置</h2><p>Git的配置是分级别，有system级别、global（用户级别）、和local（当前仓库）。三个设置先从system-》global-》local。 底层配置会覆盖顶层配置.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前仓库的配置信息</span><br><span class="line"># 系统级</span><br><span class="line">git config --system --list</span><br><span class="line"># 用户</span><br><span class="line">git config --global  --list</span><br><span class="line"># 当前仓库</span><br><span class="line">git config --local  --list</span><br><span class="line"></span><br><span class="line"># 为当前仓库写入配置信息。 </span><br><span class="line">git config --local user.name &quot;shuhaohe&quot;</span><br><span class="line">git config --local user.email &quot;shuhaohe@hotmail.com&quot;</span><br><span class="line"></span><br><span class="line"># 一劳永逸，写一个global级别的配置。这样你新建其他仓库都不需要逐一地运行上面--local的命令。</span><br><span class="line">git config --global user.name &quot;shuhaohe&quot;</span><br><span class="line">git config --global user.email &quot;shuhaohe@hotmail.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>为了避免每次远程操作都要输入密码，生成一个ssh key，并且把生成的公钥复制到github上面。这里面使得你免密码push和pull。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxx@hotmail.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>该命令会生成这么几个文件，找到id_rsa.pub，复制到Github的对应位置。<br><img src="https://i.loli.net/2019/03/05/5c7e7b90273d5.png" alt="ssh-key"></p>
+<h2 id="第三节-Git的基本原理"><a href="#第三节-Git的基本原理" class="headerlink" title="第三节 Git的基本原理"></a>第三节 Git的基本原理</h2><blockquote>
+<p>举个例子，你新建了一个文件夹LearnGit，然后在这里执行了<strong>git init</strong>。</p>
+</blockquote>
+<p>在LearnGit文件夹内的文件，可能处于以下几种状态：</p>
+<ul>
+<li>untracked，未标记，意思是没有把这个文件添加到<strong>版本管理</strong>当中，虽然它恰巧也在LearnGit这个文件夹下。</li>
+<li>tracked，已标记。就跟上面相反啦，你能够用git管理的所有文件都必须是tracked的。如何将一个文件添加到接受git管理的版本仓库当中?用`<strong>git add xxx</strong></li>
+</ul>
+<p>对于tracked文件，它有三种不同的状态，或者说不同的阶段。分别是：</p>
+<ul>
+<li>处于working space当中，意思是正在被编辑的文件，但还没提交（不太严谨）的文件都处于这个状态。</li>
+<li>处于staging 缓存区当中。通过git add xxx除了可以将一个untracked变成tracked，还可以将文件从working space加入到staging。只有staging的文件能够最终提交给版本仓库。</li>
+<li>repository 仓库。git commit 就是将staging里面的文件提交到这里。<br>  <img src="http://static.zybuluo.com/likeban/ymiypfmsljtqp2h8ap4l2xkv/image_1ce2l6pm916qas68k581vd4c8mp.png" alt="archi"><br>  <img src="http://static.zybuluo.com/likeban/29k76a2m9h83h3hwkqol2jy7/image_1ce2l7l7dv2eej0tri1lbo1s6p16.png" alt="flow"></li>
+</ul>
+<h2 id="第四节-分支管理"><a href="#第四节-分支管理" class="headerlink" title="第四节 分支管理"></a>第四节 分支管理</h2><p>来到这里，我建议安装一个Git GUI工具，方便你在GUI可视化地查看分支图。这比命令行下的字符图画要好看很多。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建新分支</span></span><br><span class="line">git checkout -b dev <span class="comment">#-b 选项表示新建并且切换分支</span></span><br><span class="line">git branch <span class="comment">#查看当前分支</span></span><br><span class="line">git checkout master <span class="comment"># 切换分支 ## 注意！没有 -b 选项</span></span><br><span class="line">git merge dev <span class="comment">#git merge命令用于合并指定分支(dev)到当前分支(HEAD)。此处是master指向dev</span></span><br><span class="line">git branch -d dev <span class="comment">#删除分支</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建分支并且推送给远程github</span></span><br><span class="line">git checkout -b dev</span><br><span class="line">git push origin dev </span><br><span class="line"></span><br><span class="line"><span class="comment"># 分支冲突</span></span><br><span class="line">git checkout -b feature1</span><br><span class="line">git checkout master</span><br><span class="line">git merge feature1 <span class="comment">#假设冲突了</span></span><br><span class="line">git status</span><br><span class="line"><span class="comment"># 修复冲突后</span></span><br><span class="line">git add xxx</span><br><span class="line">git commit -m <span class="string">"conflict fixed"</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="第五节-更多的Git命令"><a href="#第五节-更多的Git命令" class="headerlink" title="第五节 更多的Git命令"></a>第五节 更多的Git命令</h2><ol>
+<li><p>查看git操作历史 – 我认为这是给力的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline --graph --decorate</span><br><span class="line"></span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看你修改前后有什么差异</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git diff # 无参数， </span><br><span class="line">git diff --staged # 当你执行git add了，你可以利用这条命令来</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="第六节-编写-gitignore文件"><a href="#第六节-编写-gitignore文件" class="headerlink" title="第六节 编写.gitignore文件"></a>第六节 编写.gitignore文件</h2><p>有时候代码编译、运行会产生出一些无需同步到Github的文件。这时候通过.gitignore忽略这些文件。</p>
+<blockquote>
+<p>build/ ：过滤整个文件夹； </p>
+<p>*.class：过滤所有.class后缀的文件；</p>
+</blockquote>
 
           
         
@@ -526,7 +682,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -539,7 +695,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
